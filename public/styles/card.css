@@ -1,0 +1,121 @@
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+
+.enroll-form {
+ background: #242424;
+ margin: 90px;
+ border-radius: 10px;
+}
+
+.enroll-details {
+ background: #0C111F;
+ width: 512;
+ height: 589;
+ border-radius: 10.43px;
+ margin: 30px;
+}
+
+.course-title {
+ font-weight: 700;
+ font-size: 29.19px;
+ line-height: 38.01px;
+ letter-spacing: 0%;
+ color: #FFFFFF;
+ text-align: center;
+}
+
+.enroll-line {
+ border: 1px solid #ECECEC
+}
+
+p.course-info {
+ font-family: DM Sans;
+ font-weight: 400;
+ font-size: 17px;
+ line-height: 24px;
+ letter-spacing: 0;
+ color: #D4D4D4;
+ margin: 23px 23px 23px 36px;
+}
+
+.info {
+ font-family: DM Sans;
+ font-weight: 400;
+ font-size: 17px;
+ line-height: 24px;
+ letter-spacing: 0%;
+ color: #F1F1F1;
+}
+
+.bsn-address {
+ display: flex;
+}
+
+img.img-fluid.office-images {
+ margin-left: 40px;
+}
+
+.bsn-background {
+ position: relative;
+}
+
+.diamond {
+ position: absolute;
+ right: 0;
+ top: -58px;
+}
+
+.enroll-circel {
+ position: absolute;
+ right: 135px;
+ top: -20px;
+}
+
+input.form-input {
+ width: 290;
+ height: 51;
+ border-width: 0.5px;
+ border-radius: 4px;
+ background: #242424;
+ margin: 10px 20px;
+ color: #888;
+ border: 0.5px solid #F3F3F3;
+}
+
+input.form-input-resume {
+ color: wheat;
+ width: 290px;
+ height: 51px;
+ border-width: 0.5px;
+ border-radius: 4px;
+ background: #242424;
+ margin: 10px 20px;
+ text-align: center;
+ border: 0.5px solid #F3F3F3;
+}
+
+.form-input::placeholder {
+
+ font-weight: 400px;
+ font-size: 16px;
+ line-height: 20.24px;
+ letter-spacing: 0%;
+ padding-left: 10px;
+ color: #888;
+}
+
+button.submit {
+ background: #2196F3;
+ width: 170;
+ height: 50;
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
+ margin: 20% 0% 0% 56%;
+}
+.person-details {
+ margin: 45px;
+}

@@ -1,0 +1,172 @@
+/* General Reset */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: Arial, sans-serif;
+}
+
+/* body {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ /* height: 100vh; */
+ background-color: #f4f4f4;
+} */
+
+/* Button */
+button.let\'s-talk-button {
+ background: linear-gradient(279.69deg, #00796D 0%, #38C682 100%);
+ gap: 8px;
+ border-radius: 100px;
+ padding-top: 20px;
+ padding-right: 24px;
+ padding-bottom: 20px;
+ padding-left: 32px;
+ border: none;
+ font-family: Inter;
+ font-weight: 500;
+ font-size: 18px;
+ line-height: 28px;
+ letter-spacing: 0%;
+ color: #FFFFFF;
+}
+
+
+/* Modal */
+.pop-up {
+ display: none;
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ /* width: 1247px;
+ height: 695.44px; */
+ border-radius: 10.43px;
+ background-color: white;
+ box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+ z-index: 1000;
+ padding: 20px;
+}
+
+/* Close Button */
+.close-btn {
+ text-align: right;
+ cursor: pointer;
+ font-size: 24px;
+ margin-bottom: 10px;
+}
+
+/* Form Layout */
+.get-form {
+ display: flex;
+ flex-direction: row;
+ gap: 20px;
+}
+
+/* Left Side */
+.left-side {
+ /* flex: 1; */
+ background: #0C111F;
+}
+
+.phone-num {
+ display: flex;
+ gap: 20px;
+ align-items: center;
+ margin: 15px 0px;
+}
+
+h3.left-side-heading {
+ font-family: Arial;
+ font-weight: 700;
+ font-size: 29.19px;
+ line-height: 33.57px;
+ letter-spacing: 0%;
+ color: #FFFFFF;
+}
+
+p.left-side-text {
+ font-family: Arial;
+ font-weight: 400;
+ font-size: 18.77px;
+ line-height: 21.58px;
+ letter-spacing: 0%;
+ color: #FFFFFFB2;
+}
+
+p.phone-text {
+ font-family: Arial;
+ font-weight: 400;
+ font-size: 16.68px;
+ line-height: 19.18px;
+ letter-spacing: 0%;
+ color: #FFFFFF;
+}
+
+/* Right Side */
+.get-touch-form {
+ flex: 1;
+}
+
+.form-group {
+ display: flex;
+ gap: 10px;
+ margin-bottom: 15px;
+}
+
+.form-input {
+ width: 100%;
+ padding: 10px;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+}
+
+/* Radio Buttons */
+.radio-buttons label {
+ display: block;
+ margin: 5px 0;
+}
+
+/* Textarea */
+.text-area textarea {
+ width: 100%;
+ height: 80px;
+ padding: 10px;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+}
+
+/* Submit Button */
+.get-submit {
+ width: 100%;
+ padding: 10px;
+ background-color: #007bff;
+ color: white;
+ border: none;
+ cursor: pointer;
+ border-radius: 5px;
+ margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+ .pop-up {
+  width: 90%;
+  height: auto;
+  padding: 15px;
+ }
+
+ .get-form {
+  flex-direction: column;
+ }
+
+ .form-group {
+  flex-direction: column;
+ }
+
+ .radio-buttons {
+  display: flex;
+  flex-direction: column;
+ }
+}

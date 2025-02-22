@@ -1,0 +1,382 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* FONT STYLE */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap');
+
+* {
+    font-family: "DM Sans";
+    padding: 0;
+    margin: 0;
+}
+
+
+/* NAVIGATION */
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    background: #303030;
+    padding: 26px 0px 8px 7px;
+    position: relative;
+}
+
+img.img-fluid-BSN-logo {
+    width: 101px;
+    height: 66px;
+}
+
+ul.navbar-items {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.navbar-links {
+    position: relative;
+}
+
+.navbar-links a {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.09px;
+
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+    color: #2196F3;
+}
+
+.navbar-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px;
+    width: 42px;
+    height: 3px;
+    background-color: #2196F3;
+    border-radius: 1px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navbar-links a:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scaleX(1.1);
+}
+
+.contact-us {
+    border-radius: 8px;
+    background: #2196F3;
+    padding: 10px 30px;
+    margin: auto;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    border: none;
+}
+
+
+.menu-icon {
+    display: none;
+}
+
+.menu-icon i {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .navbar-menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #303030;
+        text-align: center;
+        padding: 5px 0;
+        display: none;
+
+        justify-content: center;
+    }
+
+    .navbar-items {
+        flex-direction: column;
+        /* gap: 10px;  */
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* HEADER */
+.header {
+    background: url(/public/assets/services-bg.svg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h2.profile-title {
+    font-family: Rubik;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 42.66px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+p.job-type {
+    font-family: 'Rubik', sans-serif;
+    width: 370px;
+    height: 32px;
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+button.btn {
+    width: 180px;
+    height: 52px;
+    border-radius: 8px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+    background: #2196F3;
+    /* border: none;
+cursor: pointer; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+button.btn:hover {
+    width: 180px;
+    height: 52px;
+    border-radius: 8px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+    background: gray;
+    /* border: none;
+cursor: pointer; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* OUR SERVICES */
+.our-services {
+    background: #303030;
+}
+
+h2.tittle {
+    font-family: DM Sans;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46.87px;
+    color: #F1F1F1;
+    padding-top: 20%;
+    padding-bottom: 4%
+}
+
+h3.sub-title {
+    font-family: DM Sans;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.25px;
+    color: #F1F1F1;
+
+    padding-bottom: 4%
+}
+
+li.list-of-courses {
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.83px;
+    color: #F1F1F1;
+}
+
+p.list-of-courses {
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.83px;
+    color: #F1F1F1;
+}
+
+.location-info {
+    width: 469px;
+    height: 1099px;
+}
+
+hr {
+    height: 1px;
+    border: 1px solid #EDEDED;
+}
+
+.location-details {
+    width: 469px;
+    height: 1099px;
+    background: #2A2A2A;
+    margin-top: 20%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+button.btn.btn-primary {
+    margin-top: 60px;
+
+}
+
+h3.heading {
+    font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #ECECEC;
+    padding: 30px;
+}
+
+.about {
+    padding: 30px;
+}
+
+p.place-name {
+    font-family: DM Sans;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #F1F1F1;
+}
+
+.office-details {
+    display: flex;
+    padding: 30px;
+    gap: 20px;
+    align-items: center;
+}
+
+a.place-name {
+    padding: 40px;
+}
+
+p.sahre {
+    font-family: DM Sans;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #F1F1F1;
+}
+
+.social-media {
+    padding-top: 35px;
+}
+
+img.img-fluid-social-logo {
+    padding: 4px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-top: -8%;
+}
+
+.apply-button {
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+
+/* media queries */
+@media only screen and (max-width: 768px) {
+
+    .location-details {
+        width: 352px;
+        height: 1211px;
+    }
+
+    p.place-name {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .location-details {
+        width: 307px;
+        height: 1211px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h3.sub-title {
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 31.25px;
+        padding-bottom: 2%;
+    }
+
+    li.list-of-courses {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 19.83px;
+    }
+
+    p.list-of-courses {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.83px;
+    }
+
+    h2.tittle {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 39.87px;
+    }
+
+    h3.heading {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 17px;
+    }
+
+    p.place-name {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
