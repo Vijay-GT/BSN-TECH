@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/public/styles/modal.css"> 
+  <link rel="stylesheet" href="/public/styles/pop-up.css"> 
   <title>Document</title>
 </head>
 
@@ -21,19 +21,17 @@
 
   <body>
 
-   <!-- Button to Open Modal -->
    <div class="get-touch">
    <button class="let's-talk-button" id="get-in-touch-btn">Let's Talk</button> 
 </div>
 
-<!-- Modal (Pop-up) -->
 <div class="pop-up" id="modal">
     <div class="modal-content">
         <div class="close-btn" id="close-modal">
             <i class="fa-solid fa-x"></i>
         </div>
 
-        <!-- Left Side (Contact Details) -->
+        <!-- Left Side-->
         <div class="get-form">
             <div class="left-side">
                 <div class="get-touch-heading">
@@ -58,12 +56,16 @@
 
             <!-- Right Side (Form) -->
             <div class="get-touch-form">
-                <div class="form-group">
-                    <input type="text" name="firstName" placeholder="First Name" required class="form-input">
+                <div class="form-group"> 
+                    <label for="fistname">First Name</label>
+                    <input type="text" name="firstName" placeholder="First Name" required class="form-input"> 
+                    <label for="LastName">Last Name</label>
                     <input type="text" name="LastName" placeholder="Last Name" required class="form-input">
                 </div>
-                <div class="form-group">
-                    <input type="email" name="Email" placeholder="abc@gmail.com" required class="form-input">
+                <div class="form-group"> 
+                    <label for="Email">Eamil</label>
+                    <input type="email" name="Email" placeholder="abc@gmail.com" required class="form-input"> 
+                    <label for="Email">Phone Number</label>
                     <input type="text" name="MobileNumber" placeholder="+91 0123456789" required class="form-input">
                 </div>
                 <div class="radio-buttons">
@@ -81,7 +83,7 @@
 </div>
 
     <script src="https://kit.fontawesome.com/2047094b3c.js" crossorigin="anonymous"></script>
-    <script src="/public/scripts/modal.js""></script>
+    <script src="/public/scripts/pop-up.js""></script>
   </body>
 
   </html>
