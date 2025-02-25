@@ -6,36 +6,83 @@ document.addEventListener("DOMContentLoaded", function () {
     navbarMenu.style.display = navbarMenu.style.display === "block" ? "none" : "block";
   });
 });
-document.getElementById("contactForm").addEventListener("submit", function (event) {
-  event.preventDefault(); // Prevent default form submission
 
-  // Get form values
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const subject = document.getElementById("subject").value.trim();
-  const message = document.getElementById("message").value.trim();
+ document.getElementById("contactForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent form submission
 
-  // Validate inputs
-  if (!name || !email || !subject || !message) {
-   alert("Please fill in all fields.");
-   return;
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("mail").value.trim();
+  let message = document.getElementById("message").value.trim();
+  let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Email regex pattern
+
+  if (name === "") {
+      alert("Please enter your name.");
+      return;
   }
 
-  // Create an object to store the data
-  const formData = {
-   name,
-   email,
-   subject,
-   message,
-   timestamp: new Date().toLocaleString(),
+  if (email === "") {
+      alert("Please enter your email.");
+      return;
+  } else if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+  }
+
+  if (message === "") {
+      alert("Please enter your message.");
+      return;
+  }
+
+  // Storing data in local storage
+  let formData = {
+      name: name,
+      email: email,
+      message: message
   };
 
-  // Store the data in local storage
   localStorage.setItem("contactFormData", JSON.stringify(formData));
 
-  // Show success message
-  alert("Your message has been submitted successfully!");
+  alert("Form submitted successfully! Your data has been saved.");
 
-  // Clear the form
-  document.getElementById("contactForm").reset();
- });
+  this.reset(); // Reset form fields after successful submission
+});
+
+function validateForm(event) {
+  event.preventDefault(); // Prevent form submission
+
+  const name = document.getElementById("fullname").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("Message").value.trim();
+
+  // Email regex pattern (only checks for '@' presence)
+  const emailPattern = /@/;
+
+  if (!fullname) {
+    alert("Please enter your name.");
+    return;
+  }
+
+  if (!email) {
+    // alert("Please enter your email.");
+    return;
+  } else if (!emailPattern.test(email)) {
+    alert("Email must contain '@' symbol.");
+    return;
+  }
+
+  if (!message) {
+    alert("Please enter your message.");
+    return;
+  }
+
+  // Store data in local storage
+  const formData = { fullname, email, message };
+  localStorage.setItem("contactFormData", JSON.stringify(formData));
+
+  alert("Message sent successfully!");
+
+  // Clear form fields after submission
+  document.getElementById("fullname").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("Message").value = "";
+}

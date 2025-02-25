@@ -8,6 +8,9 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="/public/assets/BSN-logo.svg" type="image/x-icon">
+  
   <link rel="stylesheet" href="./styles/index.css">
   <title>BSN TECH</title>
 
@@ -27,20 +30,50 @@
         <li class="navbar-links"><a href="#">Case Studies</a></li>
         <li class="navbar-links"><a href="/public/service.html">Blog</a></li>
         <li class="navbar-links"><a href="/public/carrier.html">Careers</a></li>
-
+        <button class="contact-us" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
       </ul>
     </div>
-    <div class="navbar-actions">
-      <button class="contact-us">Contact US</button>
-
-      <!-- <a href="#" class="navbar-links">LOGIN</a>
-      <a href="#" class="navbar-registar">REGISTER</a> -->
-    </div>
+    
     <div class="menu-icon">
       <i class="fa-solid fa-bars"></i>
     </div>
-  </div>
+</div>
 
+<!-- Bootstrap Modal for Contact Form -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content p-4">
+      
+      <!-- Close Button -->
+      <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      <div class="modal-body text-center"> 
+        <img src="/public/assets/contact-logo.png" alt="contact-logo" class="img-fluid contact-logo">
+        <h3 class="contact-heading">CONTACT US</h3> 
+        <p class="contact-text">Please fill this form in a decent manner</p> 
+
+        <form id="contactForm">
+          <div class="mb-3 text-start">
+            <label for="name" class="form-label">Name</label> 
+            <input type="text" name="name" id="name" class="form-control">
+          </div>
+
+          <div class="mb-3 text-start">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" id="mail" class="form-control">
+          </div>
+
+          <div class="mb-3 text-start">
+            <label for="message" class="form-label">Message</label>
+            <textarea name="message" id="message" class="form-control"></textarea>
+          </div>
+
+          <button type="submit" class="sub-button btn btn-primary w-100">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- HEADER -->
   <div class="header">
@@ -49,8 +82,8 @@
         <div class="col-md-6">
           <div class="header-section">
             <h3 class="heading-text">Transform Ideas into Reality with Cutting-Edge Digital Solutions</h3>
-            <button class="write-button">WRITE TO US<img src="./assets/android-send.svg" alt="android-send"
-                class="img-fluid-android-send"></button>
+            <a href="#lets-button"><button class="write-button">WRITE TO US<img src="./assets/android-send.svg" alt="android-send"
+              class="img-fluid-android-send"></button></a>
           </div>
         </div>
         <div class="col-md-6">
@@ -473,14 +506,16 @@
         <img src="./assets/Call icon.svg" alt="call-icon" class="img-fluid info-call-icon">
         <div class="phone-num">
           <p class="call-us">Call-us</p>
-          <p class="num">+(08) 255 201 888</p>
+          <a href="tel:" class="num">939264xxxx</a>
         </div>
       </div>
       <div class="call-info">
         <img src="./assets/Email icon.svg" alt="call-icon" class="img-fluid info-call-icon">
         <div class="phone-num">
           <p class="call-us">Email Now</p>
-          <p class="num">Hello@procleaning.com</p>
+          <a href="mailto:bhaskarv819@gmail.com?subject=Job%20Application&body=Hello%20Bhaskar," class="num">
+            bhaskarv819@gmail.com
+          </a>
         </div>
       </div>
       <div class="call-info">
@@ -491,19 +526,7 @@
         </div>
       </div>
     </div>
-    <!-- <div class="CTA-info">
-      <p class="info">Contact info</p>
-      <p class="keep-touch">Keep In Info</p>
-      <p class="CTA-text">We prioritize responding to your inquiries promptly to ensure you
-        receive the assistance you need in a timely manner</p>
-      <div class="details">
-        <input type="text" name="name" id="name" placeholder="Name" class="share-info">
-        <input type="email" name="email" id="email" placeholder="Email" class="share-info">
-        <input type="text" name="message" id="message" placeholder="Message">
-      </div>
-      <button class="button-btn " onclick="button-btn">Send Message</button>
-    </div> -->
-
+    
     <div class="CTA-info">
       <p class="contact-info-text">Contact info</p>
       <h3 class="keep-touch">Keep In Info</h3>
@@ -511,180 +534,141 @@
         <br> receive the assistance you need in a timely manner
       </p>
       <div class="contact-detalis">
-        <input type="text" name="name" id="name" placeholder="Name" class="details-input">
+        <input type="text" name="name" id="fullname" placeholder="Name" class="details-input">
         <input type="email" name="email" id="email" placeholder="Email" class="details-input">
         <textarea name="Message" id="Message" placeholder="Message" class="details-area"></textarea>
-        <button class="send-button" onclick="validateForm()">Send Message</button>
+        <button class="send-button" onclick="validateForm(event)">Send Message</button>
       </div>
     </div>
   </div>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footer-details">
-      <div class="footer-section">
-        <h3 class="footer-heading">Let’s discuss and bring your vision to life.</h3>
-        <button class="let's-talk-button">Let's Talk</button> 
-      </div>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
-        Let's Talk
-      <!-- Bootstrap Modal -->
-  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg"> <!-- Large modal size -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="contactModalLabel">Get In Touch</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="container contact">
-                    <div class="section-header text-center">
-                        <p>Get In Touch</p>
-                        <h2>For Any Query</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="contact-info">
-                                <div class="contact-item">
-                                    <i class="flaticon-address"></i>
-                                    <div class="contact-text">
-                                        <h2>Location</h2>
-                                        <p>Kphb,Hyderabad</p>
+  
+    <footer>
+      <div class="footer-details">
+        <div class="footer-section" id="lets-button">
+          <h3 class="footer-heading" >Let’s discuss and bring your vision to life.</h3>
+          <button class="let's-talk-button" data-bs-toggle="modal" data-bs-target="#customModal" >Let's Talk</button>
+        </div>
+        <!-- Include Modal -->
+    <div id="modal-container">
+      <div class="modal fade" id="customModal" tabindex="-1" aria-labelledby="customModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="customModalLabel">Get In Touch</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container contact">
+                        <div class="section-header text-center">
+                            <p>Get In Touch</p>
+                            <h2>For Any Query</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="contact-info">
+                                    <div class="contact-item">
+                                        <i class="flaticon-address"></i>
+                                        <div class="contact-text">
+                                            <h2>Location</h2>
+                                            <p>Kphb, Hyderabad</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="flaticon-call"></i>
-                                    <div class="contact-text">
-                                        <h2>Phone</h2>
-                                        <p>+91 824XXXXXX</p>
+                                    <div class="contact-item">
+                                        <i class="flaticon-call"></i>
+                                        <div class="contact-text">
+                                            <h2>Phone</h2>
+                                            <p>+91 824XXXXXX</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="flaticon-send-mail"></i>
-                                    <div class="contact-text">
-                                        <h2>Email</h2>
-                                        <p>bsntech@gmail.com</p>
+                                    <div class="contact-item">
+                                        <i class="flaticon-send-mail"></i>
+                                        <div class="contact-text">
+                                            <h2>Email</h2>
+                                            <p>bsntech@gmail.com</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="contact-form">
-                                <div id="success"></div>
-                                <form name="sentMessage" id="contactForm" novalidate="novalidate" onsubmit="storeFormData(event)">
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required="required"
-                                            data-validation-required-message="Please enter your name">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required="required"
-                                            data-validation-required-message="Please enter your email">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required="required"
-                                            data-validation-required-message="Please enter a subject">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-          
-                                    <div class="control-group">
-                                        <textarea class="form-control" id="message" placeholder="Message" required="required"
-                                            data-validation-required-message="Please enter your message"></textarea>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div>
-                                        <button class="btn btn-primary" type="submit" id="sendMessageButton">
-                                            Send Message
-                                        </button>
-                                    </div>
-                                </form>
-                                
+                            <div class="col-md-6">
+                                <div class="contact-form">
+                                    <form id="contactForm">
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <textarea class="form-control" id="message" placeholder="Message" required></textarea>
+                                        </div>
+                                        <button class="btn btn-primary" type="submit">Send Message</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-      <hr />
-      <div class="footer-social-links">
-        <div class="footer-bsn">
-          <div class="bsn-footer-info">
-            <img src="/public/assets/BSN-logo.svg" alt="BSN-logo" class="img-fluid">
-            <!-- <h3 class="bsn-title">BSN</h3> -->
+    
+    </div>
+      <hr/>
+        <div class="footer-social-links">
+          <div class="footer-bsn">
+            <div class="bsn-footer-info">
+              <img src="/public/assets/BSN-logo.svg" alt="BSN-logo" class="img-fluid">
+              <!-- <h3 class="bsn-title">BSN</h3> -->
+            </div>
+            <p class="bsn-footer-text">We're a team of experienced designers,<br> developers, and marketers, passionate about <br>
+              delivering exceptional digital solutions.</p>
           </div>
-          <p class="bsn-footer-text">We're a team of experienced designers,<br> developers, and marketers, passionate
-            about <br>
-            delivering exceptional digital solutions.</p>
-        </div>
-
-        <div class="social-links sm">
+        
+        <div class="social-links">
           <ul class="social-links-list">
             <h5 class="social-link-head">Menu</h5>
-            <a href="">
-              <li class="social-link">Home</li>
-            </a>
-            <a href="">
-              <li class="social-link">Services</li>
-            </a>
-            <a href="">
-              <li class="social-link">About Us</li>
-            </a>
-            <a href="">
-              <li class="social-link">Project</li>
-            </a>
-            <a href="">
-              <li class="social-link">Contact</li>
-            </a>
+            <a href=""><li class="social-link">Home</li></a>
+            <a href=""><li class="social-link">Services</li></a>
+            <a href=""><li class="social-link">About Us</li></a>
+            <a href=""><li class="social-link">Project</li></a>
+            <a href=""><li class="social-link">Contact</li></a>
           </ul>
         </div>
         <div class="social-links">
           <ul class="social-links-list">
             <h5 class="social-link-head">Support</h5>
-            <a href="">
-              <li class="social-link">FAQ</li>
-            </a>
-            <a href="">
-              <li class="social-link">Privacy Policy</li>
-            </a>
-            <a href="">
-              <li class="social-link">Terms Of Services</li>
-            </a>
+            <a href=""><li class="social-link">FAQ</li></a>
+            <a href=""><li class="social-link">Privacy Policy</li></a>
+            <a href=""><li class="social-link">Terms Of Services</li></a>
           </ul>
         </div>
-        <div class="social-links">
+        <div class="social-links"> 
           <ul class="social-links-list">
             <h5 class="social-link-head">Social Media</h5>
-            <a href="">
-              <li class="social-link">LinkedIn</li>
-            </a>
-            <a href="">
-              <li class="social-link">Tweeter</li>
-            </a>
-            <a href="">
-              <li class="social-link">Instagram</li>
-            </a>
-            <a href="">
-              <li class="social-link">Dribble</li>
-            </a>
-            <a href="">
-              <li class="social-link">Behance</li>
-            </a>
+            <a href=""><li class="social-link">LinkedIn</li></a>
+            <a href=""><li class="social-link">Tweeter</li></a>
+            <a href=""><li class="social-link">Instagram</li></a>
+            <a href=""><li class="social-link">Dribble</li></a>
+            <a href=""><li class="social-link">Behance</li></a>
           </ul>
         </div>
-      </div>
-      <hr />
+      </div>  
+      <hr/>
       <div class="copy-right">
         <p class="copy-right-text">Copyright © 2023 by Agenone. All rights reserved.</p>
-      </div>
-    </div>
+      </div> 
+      </div> 
+      
+    </footer>
 
-  </footer>
   <script src="https://kit.fontawesome.com/2047094b3c.js" crossorigin="anonymous"></script>
   <script src="/public/scripts/index.js"></script>
 </body>

@@ -24,42 +24,43 @@
     background: #303030;
     padding: 26px 0px 8px 7px;
     position: relative;
-}
-
-img.img-fluid-BSN-logo {
+  }
+  
+  img.img-fluid-BSN-logo {
     width: 101px;
     height: 66px;
-}
-
-ul.navbar-items {
+  }
+  
+  ul.navbar-items {
     list-style: none;
     display: flex;
-    gap: 50px;
-}
-
-a {
+    gap: 70px;
+    padding-top: 26px;
+  }
+  
+  a {
     text-decoration: none;
     color: #FFFFFF;
-}
-
-.navbar-links {
+  }
+  
+  .navbar-links {
     position: relative;
-}
-
-.navbar-links a {
+  }
+  
+  .navbar-links a {
     font-family: Roboto;
     font-size: 18px;
     font-weight: 500;
     line-height: 21.09px;
-
+  
     transition: color 0.3s ease-in-out;
-}
-
-.navbar-links a:hover {
+  }
+  
+  .navbar-links a:hover {
     color: #2196F3;
-}
-
-.navbar-links a::after {
+  }
+  
+  .navbar-links a::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -71,14 +72,14 @@ a {
     border-radius: 1px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.navbar-links a:hover::after {
+  }
+  
+  .navbar-links a:hover::after {
     opacity: 1;
     transform: translateX(-50%) scaleX(1.1);
-}
-
-.contact-us {
+  }
+  
+  .contact-us {
     border-radius: 8px;
     background: #2196F3;
     padding: 10px 30px;
@@ -87,44 +88,130 @@ a {
     font-size: 16px;
     font-weight: 500;
     line-height: 18.75px;
+    cursor: pointer;
     border: none;
-}
-
-
-.menu-icon {
+  }
+  
+  
+  .menu-icon {
     display: none;
-}
-
-.menu-icon i {
+  }
+  
+  .menu-icon i {
     font-size: 25px;
     color: white;
     cursor: pointer;
-}
-
-/* Responsive Styles for Mobile */
-@media (max-width: 768px) {
+  }
+  
+  /* Responsive Styles for Mobile */
+  @media (max-width: 768px) {
     .navbar-menu {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background: #303030;
-        text-align: center;
-        padding: 5px 0;
-        display: none;
-
-        justify-content: center;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: #303030;
+      text-align: center;
+      padding: 5px 0;
+      display: none;
+  
+      justify-content: center;
+  
     }
-
+  
     .navbar-items {
-        flex-direction: column;
-        /* gap: 10px;  */
+      flex-direction: column;
+      /* gap: 10px;  */
+  
     }
+  
     .menu-icon {
-        display: block;
+      display: block;
     }
-}
-
+  }
+  /* MODAL */ 
+  /* Modal Styling */ 
+  img.img-fluid.contact-logo {
+    width: 65px;
+    height: 65px;
+  }
+  .modal-content {
+    border-radius: 12px;
+    background: #303030;
+    color: white;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .modal-body {
+    text-align: center;
+  }
+  
+  .contact-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2196F3;
+  }
+  
+  .contact-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+  }
+  
+  .form-control {
+    background: #424242;
+    border: 1px solid #666;
+    color: white;
+    border-radius: 6px;
+    padding: 10px;
+  }
+  
+  .form-control:focus {
+    border-color: #2196F3;
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+  }
+  
+  .sub-button {
+    background: #2196F3;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .sub-button:hover {
+    background: #1E88E5;
+  }
+  
+  .btn-close {
+    filter: invert(1); /* Makes the close button white */
+  }
+  
+  @media (max-width: 576px) {
+    .modal-content {
+      padding: 15px;
+    }
+  
+    .contact-heading {
+      font-size: 20px;
+    }
+  
+    .form-control {
+      font-size: 14px;
+    }
+  }
+  
+  
 /* HEADER */
 .header {
     background: url(/public/assets/services-bg.svg);

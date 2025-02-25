@@ -26,7 +26,8 @@ img.img-fluid-BSN-logo {
 ul.navbar-items {
   list-style: none;
   display: flex;
-  gap: 50px;
+  gap: 70px;
+  padding-top: 26px;
 }
 
 a {
@@ -79,6 +80,7 @@ a {
   font-size: 16px;
   font-weight: 500;
   line-height: 18.75px;
+  cursor: pointer;
   border: none;
 }
 
@@ -106,17 +108,102 @@ a {
     display: none;
 
     justify-content: center;
+
   }
 
   .navbar-items {
     flex-direction: column;
     /* gap: 10px;  */
+
   }
 
   .menu-icon {
     display: block;
   }
 }
+/* MODAL */ 
+/* Modal Styling */ 
+img.img-fluid.contact-logo {
+  width: 65px;
+  height: 65px;
+}
+.modal-content {
+  border-radius: 12px;
+  background: #303030;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.contact-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2196F3;
+}
+
+.contact-text {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.form-control {
+  background: #424242;
+  border: 1px solid #666;
+  color: white;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.form-control:focus {
+  border-color: #2196F3;
+  box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+}
+
+.sub-button {
+  background: #2196F3;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.sub-button:hover {
+  background: #1E88E5;
+}
+
+.btn-close {
+  filter: invert(1); /* Makes the close button white */
+}
+
+@media (max-width: 576px) {
+  .modal-content {
+    padding: 15px;
+  }
+
+  .contact-heading {
+    font-size: 20px;
+  }
+
+  .form-control {
+    font-size: 14px;
+  }
+}
+
+
 
 
 /* BANNER */
@@ -438,6 +525,169 @@ p.copy-right-text {
   color: #B6B8BC;
   text-align: center;
 }
+/* MODAL */
+/* Let's Talk Button Styling */
+button.lets-talk-button {
+  background: linear-gradient(279.69deg, #00796D 0%, #38C682 100%);
+  gap: 8px;
+  border-radius: 100px;
+  padding: 20px 32px 20px 24px;
+  border: none;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lets-talk-button:hover {
+  background: linear-gradient(279.69deg, #005F58 0%, #2FA872 100%);
+}
+
+/* Contact Section */
+.contact {
+  position: relative;
+  width: 100%;
+}
+
+.contact .col-md-6 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.contact .col-md-6:first-child {
+  background: #030f27;
+}
+
+.contact .col-md-6:last-child {
+  background: #fdbe33;
+}
+
+.contact .contact-info {
+  position: relative;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.contact .contact-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  border: 1px solid rgba(256, 256, 256, .2);
+}
+
+.contact .contact-item [class^="flaticon-"]::before {
+  margin: 0;
+  color: #fdbe33;
+  font-size: 40px;
+}
+
+.contact .contact-text {
+  position: relative;
+  width: auto;
+  padding-left: 20px;
+}
+
+.contact .contact-text h2 {
+  color: #fdbe33;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.contact .contact-text p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.contact .contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact .contact-form {
+  position: relative;
+  padding: 0 15px;
+}
+
+.contact .contact-form input,
+.contact .contact-form textarea {
+  color: #ffffff;
+  border-radius: 0;
+  border-width: 1px;
+  border-color: rgba(256, 256, 256, .4);
+  background: transparent;
+}
+
+.contact .contact-form input {
+  height: 40px;
+}
+
+.contact .contact-form textarea {
+  height: 185px;
+}
+
+.contact .contact-form input:focus,
+.contact .contact-form textarea:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.contact .contact-form .form-control::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* Contact Form Button */
+.contact .contact-form .btn {
+  padding: 16px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fdbe33;
+  background: #030f27;
+  border: none;
+  border-radius: 0;
+  transition: .3s;
+}
+
+.contact .contact-form .btn:hover {
+  color: #030f27;
+  background: #ffffff;
+}
+
+/* Modal Styling */
+.modal-content {
+  background: #020916;
+  color: white;
+  border: none;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.btn-close {
+  filter: invert(1); /* Makes the close button white */
+}
+
+/* Section Header */
+.section-header p {
+  color: #fdbe33;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.section-header h2 {
+  margin: 0;
+  position: relative;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
 
 /* RESPONSIVE */
 @media only screen and (max-width: 1024px) {
@@ -688,7 +938,25 @@ p.copy-right-text {
     line-height: 22px;
     padding-top: 7px;
   }
-  .footer-social-links {
+  /* .footer-social-links {
     padding-left: 1px;
+} */
+}
+@media only screen and (max-width:404px){ 
+  .footer-social-links {
+    gap: 0px;
+    padding-left: 49px;
+}
+li.social-link {
+  font-weight: 400;
+  font-size: 12px;
+}
+}
+@media only screen and (max-width:560px){ 
+  .footer-social-links {
+    gap: 0px;
+  }
+  .footer-section {
+    flex-wrap: wrap;
 }
 }
