@@ -920,7 +920,7 @@ button {
 }
 
 .footer-details {
-  background: url(/public/assets/Union-bg.svg);
+  background: url(assets/Union-bg.svg);
   background-position: bottom;
   background-size: cover;
 }

@@ -208,7 +208,7 @@ img.img-fluid.contact-logo {
 
 /* BANNER */
 .banner {
-  background: url(/public/assets/carrier-bg.svg);
+  background: url(assets/carrier-bg.svg);
   text-align: center;
   height: 550px;
   padding-top: 10%;

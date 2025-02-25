@@ -214,7 +214,7 @@
   
 /* HEADER */
 .header {
-    background: url(/public/assets/services-bg.svg);
+    background: url(/assets/services-bg.svg);
     background-size: cover;
     background-position: center;
     width: 100%;
